@@ -13,8 +13,8 @@
 
 <body class="h-screen flex justify-center items-center bg-darkSlateGrey">
 
-    <div class="w-[375px] bg-white">
-        <img class="w-full" src="./images/illustration-sign-up-mobile.svg" alt="">
+    <div class="w-[375px] bg-white lg:flex lg:items-center lg:w-[800px] lg:p-6 lg:rounded-3xl card-main">
+        <img class="w-full lg:hidden" src="./images/illustration-sign-up-mobile.svg" alt="">
         <div class="px-6 pb-8 space-y-4 text-darkSlateGrey card-body">
             <p class="my-6 text-4xl font-bold">Stay updated!</p>
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -33,27 +33,44 @@
             </ul>
 
             <div>
-                <label class="block mt-6 mb-2 font-bold text-sm" for="email">Email address</label>
+                <div class="flex justify-between">
+                    <label class="block mt-6 mb-2 font-bold text-sm" for="email">Email address</label>
+                    <p class="mt-6 mb-2 font-bold text-sm text-tomato error-info"></p>
+                </div>
                 <input class="w-full p-4 mb-2 rounded-lg border border-gray-400" type="text" id="email"
                     placeholder="email@company.com">
             </div>
 
             <button
-                class="w-full p-4 rounded-lg bg-darkSlateGrey text-white hover:bg-charcoalGrey transition-colors">Subscribe
+                class="subscribe-btn w-full p-4 rounded-lg bg-darkSlateGrey text-white hover:shadow-xl hover:shadow-rose-300 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500">Subscribe
                 to monthly newsletter</button>
-
         </div>
+
+        <img class="hidden lg:block" src="./images/illustration-sign-up-desktop.svg" alt="">
+
     </div>
 
+    <div class="w-[375px] h-[779px] bg-white hidden lg:h-[440px] lg:rounded-3xl card-message">
 
-    <!-- Thanks for subscribing!
+        <div
+            class="p-6 space-y-7 w-full h-full lg:flex lg:flex-col lg:justify-center lg:items-start lg:p-12 lg:space-y-5 lg:pt-2">
+            <img class="mt-[8em] lg:mt-0 lg:w-1/5 lg:h-1/5" src="./images/icon-success.svg" alt="">
 
-    A confirmation email has been sent to ash@loremcompany.com.
-    Please open it and click the button inside to confirm your subscription.
+            <p class="my-6 text-4xl font-bold">Thanks for subscribing!</p>
 
-    Dismiss message -->
+            <p class="lg:text-sm">A confirmation email has been sent to <span class="font-bold email-address"></span>.
+                Please open it
+                and
+                click the button inside to confirm your subscription.</p>
 
+            <button
+                class="hide-message translate-y-[215px] w-full p-4 rounded-lg bg-darkSlateGrey text-white lg:translate-y-[10px] lg:text-sm hover:shadow-xl hover:shadow-rose-300 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500">Dismiss
+                message</button>
+        </div>
 
+    </div>
+
+    <script src="./main.js"></script>
 </body>
 
 </html>
